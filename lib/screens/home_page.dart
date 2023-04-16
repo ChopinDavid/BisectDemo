@@ -1,4 +1,5 @@
 import 'package:bisect_demo/screens/decrement_page.dart';
+import 'package:bisect_demo/screens/fibonacci_page.dart';
 import 'package:bisect_demo/screens/increment_page.dart';
 import 'package:flutter/material.dart';
 
@@ -63,6 +64,24 @@ class HomePage extends StatelessWidget {
               },
               child: Text(
                 'Base 2',
+                style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                      color: Colors.white,
+                    ),
+              ),
+            ),
+            const SizedBox(
+              height: 8.0,
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const FibonacciPage()),
+                );
+              },
+              child: Text(
+                'Fibonacci',
                 style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                       color: Colors.white,
                     ),
