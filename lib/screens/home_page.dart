@@ -2,6 +2,8 @@ import 'package:bisect_demo/screens/decrement_page.dart';
 import 'package:bisect_demo/screens/increment_page.dart';
 import 'package:flutter/material.dart';
 
+import 'base_2_page.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -44,6 +46,23 @@ class HomePage extends StatelessWidget {
               },
               child: Text(
                 'Decrement',
+                style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                      color: Colors.white,
+                    ),
+              ),
+            ),
+            const SizedBox(
+              height: 8.0,
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Base2Page()),
+                );
+              },
+              child: Text(
+                'Base 2',
                 style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                       color: Colors.white,
                     ),
