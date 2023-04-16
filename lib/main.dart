@@ -1,4 +1,4 @@
-import 'package:bisect_demo/screens/increment_page.dart';
+import 'package:bisect_demo/screens/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    const MaterialColor primaryColor = Colors.green;
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -23,9 +24,14 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.green,
+        primarySwatch: primaryColor,
+        textButtonTheme: TextButtonThemeData(
+          style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.all(primaryColor),
+          ),
+        ),
       ),
-      home: const IncrementPage(),
+      home: const HomePage(),
     );
   }
 }
