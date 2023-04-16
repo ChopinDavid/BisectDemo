@@ -1,3 +1,4 @@
+import 'package:bisect_demo/misc/diamond_border.dart';
 import 'package:flutter/material.dart';
 
 class DecrementPage extends StatefulWidget {
@@ -79,6 +80,7 @@ class _DecrementPageState extends State<DecrementPage> {
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Decrement',
+        shape: const DiamondBorder(),
         child: const Icon(Icons.remove),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );

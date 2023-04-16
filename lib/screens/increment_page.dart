@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../misc/diamond_border.dart';
+
 class IncrementPage extends StatefulWidget {
   const IncrementPage({super.key});
 
@@ -26,7 +28,7 @@ class _IncrementPageState extends State<IncrementPage> {
       // so that the display can reflect the updated values. If we changed
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
-      _counter++;
+      _counter += 2;
     });
   }
 
@@ -77,6 +79,7 @@ class _IncrementPageState extends State<IncrementPage> {
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
+        shape: const DiamondBorder(),
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
