@@ -41,8 +41,10 @@ class HomePage extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) =>
-                          const DecrementPage(initialValue: 999)),
+                    builder: (context) => const DecrementPage(
+                      initialValue: 999,
+                    ),
+                  ),
                 );
               },
               child: Text(
@@ -59,7 +61,9 @@ class HomePage extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const Base2Page()),
+                  MaterialPageRoute(
+                    builder: (context) => const Base2Page(),
+                  ),
                 );
               },
               child: Text(
@@ -77,7 +81,8 @@ class HomePage extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => const FibonacciPage()),
+                    builder: (context) => const FibonacciPage(),
+                  ),
                 );
               },
               child: Text(
